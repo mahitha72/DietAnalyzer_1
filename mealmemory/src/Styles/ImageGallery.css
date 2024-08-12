@@ -1,0 +1,42 @@
+/* src/components/ImageGallery.css */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  gap: 1rem; /* Space between items */
+  padding: 1rem; /* Optional: add padding around the gallery */
+}
+
+.gallery-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  flex: 1 1 calc(33.333% - 1rem); /* Adjust width of items based on screen size */
+  max-width: 250px; /* Maximum width for each item */
+  box-sizing: border-box;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: adds rounded corners */
+  border: 2px solid #ccc; /* Border around the image */
+  padding: 2px; /* Optional: adds space between border and image */
+  box-sizing: border-box; /* Ensures border is included in width calculation */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 1rem); /* Two items per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    flex: 1 1 calc(100% - 1rem); /* One item per row on small screens */
+  }
+}

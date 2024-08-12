@@ -1,0 +1,63 @@
+/* src/components/Modal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .modal-title {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .modal-description {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Start with hidden description */
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the modal */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 90%; /* Adjust width as needed */
+    background: rgba(0, 0, 0, 0.8); /* Background color to make text readable */
+    color: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-align: center; /* Center text */
+  }
+  
+  .modal-description.description-visible {
+    opacity: 1; /* Show description when visible */
+    transform: translateX(-50%) scale(1.1); /* Scale up and center horizontally */
+  }
+  

@@ -1,0 +1,16 @@
+/* src/components/Nav.css */
+.navbar {
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Position it at the top */
+    left: 0;
+    width: 100%; /* Span the full width of the viewport */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    /* background-color: #yourNavbarColor; Background color of the navbar */
+  }
+  
+  .content {
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        height: 100vh; /* Full viewport height */
+        overflow-y: auto; /* Enable vertical scrolling */
+      }
