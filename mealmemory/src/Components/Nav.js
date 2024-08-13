@@ -48,6 +48,16 @@ const Nav = () => {
                   {link.name}
                 </a>
               </li>
+            ))
+          }
+          <Button className="text-Black">
+          <Link to='/SignUp'>
+            Login/Signup
+            </Link>
+          </Button>
+          
+        </ul>
+      </div>
             ))}
             <Button className="text-Black">
               <Link to="/SignUp">Sign Up/Log In </Link>

@@ -1,7 +1,12 @@
 import "./App.css";
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import SignUp from "./Components/SignUp";
+import GeneratePie from "./Components/GeneratePie";
+// import { messaging } from "./firebase";
+// import { getToken } from "firebase/messaging";
+// import { useEffect } from "react";
 import { messaging } from "./firebase";
 import { getToken } from "firebase/messaging";
 import { useEffect } from "react";
@@ -22,20 +27,26 @@ function App() {
     }
   }
 
+//   useEffect(() => {
+//     // Req user for notification permission
+//     requestPermission();
+//   }, []);
+const [signIn, toggle] = useState(true);
   useEffect(() => {
     // Req user for notification permission
     requestPermission();
   }, []);
   return (
-    <>
     <Router>
+      <div>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/SignUp" element={<SignUp/>}/>
+        <Route path="/SignUp" element={<SignUp signIn={signIn} toggle={toggle}/>}/>
+        <Route path="/createuser"element={<SignUp signIn={!signIn} toggle={toggle}/>}/>
+        <Route path="/pie" element={<GeneratePie />} />
       </Routes>
+      </div>
     </Router>
-      
-    </>
   );
 }
 
