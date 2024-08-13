@@ -39,7 +39,10 @@ const SignUp = () => {
     if (json.success) {
       localStorage.setItem("authToken",json.authToken)
       console.log(localStorage.getItem("authToken"))
-      navigate('/');
+      localStorage.setItem('userEmail', credentials.email); // Store email in local storage
+      console.log(localStorage.getItem("userEmail"))
+      alert("Login successfully");
+      navigate('/pie');
     } else {
       alert("Invalid login credentials");
     }

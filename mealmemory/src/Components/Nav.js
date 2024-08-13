@@ -33,7 +33,7 @@ const Nav = () => {
           }
           <Button className="text-Black">
           <Link to='/SignUp'>
-            Sign In
+            Login/Signup
             </Link>
           </Button>
           
