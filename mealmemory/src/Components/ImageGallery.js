@@ -28,6 +28,7 @@ const ImageGallery = () => {
       title: "Image 2",
       description: "Diet recommendations based on macronutrient levels tailor nutrient intake to individual needs, balancing proteins, fats, and carbohydrates to optimize energy, support muscle growth, and maintain overall health for personalized dietary goals.",
     },
+  
   ];
 
   const ROTATION_RANGE = 32.5;

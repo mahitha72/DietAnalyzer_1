@@ -8,6 +8,7 @@ import Footer from './Footer';
 
 
 
+
 function Home() {
   return (
     <div>
@@ -21,6 +22,7 @@ function Home() {
           {/* <Medium/> */}
           <Nav />
           <ImageGallery />
+          <Carosel/>
           <Footer/>
         </div>
       </motion.div>
