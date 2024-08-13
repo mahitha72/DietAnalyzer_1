@@ -1,7 +1,8 @@
 import "./App.css";
 import BackgroundVideo from "./Components/BackgroundVideo";
+import Footer from "./Components/Footer";
 import ImageGallery from "./Components/ImageGallery";
-import Medium from "./Components/Medium";
+// import Medium from "./Components/Medium";
 import Nav from "./Components/Nav";
 import { motion } from "framer-motion";
 

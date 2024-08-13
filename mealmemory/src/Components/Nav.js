@@ -16,7 +16,7 @@ const Nav = () => {
     <div className='md w-full fixed top-0 left-0'>
       <div className='md:flex items-center justify-between bg-[#yourBodyColor] py-3 md:px-9 px-7'>
         <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-Black'>
-          Designer
+         <img src = "./Images/" ></img> Designer
         </div>
         <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
           <ion-icon name={open ? 'close' : 'menu'} className="text-Black"></ion-icon>
