@@ -15,7 +15,10 @@ const Nav = () => {
   return (
     <div className="navbar">
       <div className="md w-full fixed top-0 left-0 bg-white">
-        <div className="md:flex items-center justify-between bg-[#yourBodyColor] pb-0 py-3 md:px-9 px-7">
+        <div
+          className="md:flex items-center justify-between bg-[#yourBodyColor] pb-0 py-3 md:px-9 px-7"
+          style={{ height: "10vh" }}
+        >
           <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-Black">
             {/* <img src = "./Images/" ></img>  */}
             <img

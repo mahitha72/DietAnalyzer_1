@@ -2,6 +2,7 @@
 import React from "react";
 import "../Styles/BackgroundVideo.css";
 import "../Styles/Nav.css";
+import Scroll from "./Scroll";
 
 const BackgroundVideo = ({ children }) => {
   return (
@@ -10,7 +11,7 @@ const BackgroundVideo = ({ children }) => {
         className="background-video-container"
         style={{ position: "absolute", zIndex: -1 }}
       >
-        <video
+        {/* <video
           autoPlay
           loop
           muted
@@ -19,19 +20,20 @@ const BackgroundVideo = ({ children }) => {
         >
           <source src="/Background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
-        <div className="overlay-content">
+        </video> */}
+        <Scroll />
+        {/* <div className="overlay-content">
           {children}{" "}
-          {/* Render any child components or content on top of the video */}
-        </div>
+          Render any child components or content on top of the video
+        </div> */}
       </div>
       <div className="content" style={{ marginTop: "60px" }}>
         <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center mx-auto my-6 lg:my-12">
           <div className="order-2 lg:order-1 lg:flex-1 lg:flex lg:flex-col lg:justify-center lg:items-start">
-            <h1 className="text-5xl font-bold leading-tight lg:text-6xl text-center lg:text-left mb-4 text-Black">
+            <h1 className="text-5xl font-bold leading-tight lg:text-6xl text-center lg:text-left mb-4 text-white">
               Precision Diet Tracking for Better Health
             </h1>
-            <h4 className="text-lg lg:text-xl text-center lg:text-left text-grey-200">
+            <h4 className="text-lg lg:text-xl text-center lg:text-left text-white">
               Leverage advanced technology and dietitian expertise <br />
               to achieve your health goals with detailed food tracking,
               <br /> personalized Ayurvedic diet plans, and engaging features
