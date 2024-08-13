@@ -5,12 +5,13 @@ import { getMessaging, getToken } from "firebase/messaging";
 const firebaseConfig = {
     apiKey: "AIzaSyCxemfuoAso2MOtYJEICtvY8uUJTv9yNeA",
     authDomain: "myntranotification.firebaseapp.com",
+    //databaseURL: "https://myntranotification-default-rtdb.firebaseio.com",
     projectId: "myntranotification",
     storageBucket: "myntranotification.appspot.com",
     messagingSenderId: "631199774571",
     appId: "1:631199774571:web:dcc41b0ac66ee3d513fe2e",
     measurementId: "G-SXPYCWNN5E"
-};
+  };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);

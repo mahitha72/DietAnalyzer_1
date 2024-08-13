@@ -5,6 +5,7 @@ import ImageGallery from './ImageGallery';
 import Nav from './Nav';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
+import Caroseul from './Caroseul';
 
 
 
@@ -22,7 +23,7 @@ function Home() {
           {/* <Medium/> */}
           <Nav />
           <ImageGallery />
-          <Carosel/>
+          <Caroseul/>
           <Footer/>
         </div>
       </motion.div>

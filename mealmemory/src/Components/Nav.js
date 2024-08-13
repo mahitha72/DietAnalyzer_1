@@ -18,6 +18,11 @@ const Nav = () => {
       <div className='md:flex items-center justify-between bg-[#yourBodyColor] py-3 md:px-9 px-7'>
         <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-Black'>
          {/* <img src = "./Images/" ></img>  */}
+         <img
+              src="./Images/logo.jpg"  // Replace with your image URL
+              alt="Logo"
+              className="w-10 h-12 mr-3"  // Adjust width and height as needed
+            />
          Designer
         </div>
         <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
