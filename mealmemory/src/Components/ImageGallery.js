@@ -28,6 +28,12 @@ const ImageGallery = () => {
       title: "Image 2",
       description: "Diet recommendations based on macronutrient levels tailor nutrient intake to individual needs, balancing proteins, fats, and carbohydrates to optimize energy, support muscle growth, and maintain overall health for personalized dietary goals.",
     },
+    {
+      src:"/Images/img3.jpg",
+      title:"Image 3",
+      description:"Analyze your Vata, Pitta, and Kapha doshas with our interactive tool. Discover your current state, understand imbalances, and receive personalized recommendations to restore harmony and optimize well-being."
+    }
+  
   ];
 
   const ROTATION_RANGE = 32.5;
@@ -100,13 +106,22 @@ const ImageGallery = () => {
                 </p>
               </motion.div>
               {isImageActive && (
-                <div
-                  className="absolute inset-0 bg-black opacity-50 flex items-center justify-center"
-                  style={{
-                    pointerEvents: "none",
-                  }}
-                >
-                  <div className="text-white text-center">
+                <div style={{ position: "static" }}>
+                  <div
+                    className="absolute inset-0 bg-black opacity-50 flex items-center justify-center rounded-lg"
+                    style={{
+                      pointerEvents: "none",
+                    }}
+                  ></div>
+                  <div
+                    className="text-white opacity-100 text-center "
+                    style={{
+                      position: "absolute",
+                      zIndex: "10",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  >
                     <h3 className="text-2xl font-bold">{image.title}</h3>
                     <p className="text-lg">{image.description}</p>
                   </div>
