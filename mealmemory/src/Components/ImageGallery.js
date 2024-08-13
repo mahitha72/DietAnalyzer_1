@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-import Modal from "./Modal";
+import React, { useRef, useState } from "react";
 import "../Styles/ImageGallery.css"; // Ensure CSS is imported here
 import {
   motion,
@@ -11,7 +10,6 @@ import {
 // src/components/ImageGallery.js
 
 const ImageGallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -23,25 +21,19 @@ const ImageGallery = () => {
     {
       src: "/Images/img1.jpg",
       title: "Image 1",
-      description: "Description for Image 1",
+      description: "Analyzes the number of calories in food to manage energy intake. It helps in diet planning by balancing calorie consumption with expenditure, supporting weight management and overall health.",
     },
     {
       src: "/Images/img2.jpg",
       title: "Image 2",
-      description: "Description for Image 2",
+      description: "Diet recommendations based on macronutrient levels tailor nutrient intake to individual needs, balancing proteins, fats, and carbohydrates to optimize energy, support muscle growth, and maintain overall health for personalized dietary goals.",
     },
   ];
 
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
-  };
-
-  const handleClose = () => {
-    setSelectedImage(null);
-  };
-
   const ROTATION_RANGE = 32.5;
   const HALF_ROTATION_RANGE = 32.5 / 2;
+
+  const [activeImage, setActiveImage] = useState(null);
 
   const handleMouseMove = (e, x, y) => {
     if (!x || !y) return;
@@ -61,9 +53,12 @@ const ImageGallery = () => {
     y.set(rY);
   };
 
-  const handleMouseLeave = (x, y) => {
-    if (!x || !y) return;
+  const handleMouseEnter = (index) => {
+    setActiveImage(index);
+  };
 
+  const handleMouseLeave = () => {
+    setActiveImage(null);
     x.set(0);
     y.set(0);
   };
@@ -71,26 +66,23 @@ const ImageGallery = () => {
   return (
     <div className="gallery">
       {images.map((image, index) => {
+        const isImageActive = activeImage === index;
+
         return (
-          <div
-            key={index}
-            className="gallery-item"
-            onMouseEnter={() => handleImageClick(image)}
-          >
-            <motion.div
-              ref={ref}
+          <div key={index} className="gallery-item">
+            <div
               onMouseMove={(e) => handleMouseMove(e, x, y)}
-              onMouseLeave={() => handleMouseLeave(x, y)}
-              style={{
-                transformStyle: "preserve-3d",
-                transform,
-              }}
-              className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+              className={`relative h-96 w-72 rounded-xl bg-gradient-to-br ${
+                isImageActive ? "from-indigo-300 to-violet-300" : ""
+              }`}
             >
-              <div
+              <motion.div
+                ref={ref}
                 style={{
-                  transform: "translateZ(75px)",
                   transformStyle: "preserve-3d",
+                  transform: isImageActive ? transform : "none",
                 }}
                 className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
               >
@@ -106,12 +98,24 @@ const ImageGallery = () => {
                     className="gallery-image"
                   />
                 </p>
-              </div>
-            </motion.div>
+              </motion.div>
+              {isImageActive && (
+                <div
+                  className="absolute inset-0 bg-black opacity-50 flex items-center justify-center"
+                  style={{
+                    pointerEvents: "none",
+                  }}
+                >
+                  <div className="text-white text-center">
+                    <h3 className="text-2xl font-bold">{image.title}</h3>
+                    <p className="text-lg">{image.description}</p>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         );
       })}
-      {selectedImage && <Modal image={selectedImage} onClose={handleClose} />}
     </div>
   );
 };

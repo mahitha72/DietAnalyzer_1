@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Center items horizontally */
-  gap: 1rem; /* Space between items */
+  gap: 5rem; /* Space between items */
   padding: 1rem; /* Optional: add padding around the gallery */
 }
 

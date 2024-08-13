@@ -16,17 +16,37 @@
 
     <!-- Watson Assistant Chat Script -->
     <script>
-      window.watsonAssistantChatOptions = {
-        integrationID: "f51f7e02-093e-49e4-8913-10bb1dd5659c", // The ID of this integration.
-        region: "au-syd", // The region your integration is hosted in.
-        serviceInstanceID: "5b4fb7dc-3b9c-4258-b27e-dc72a21d23c0", // The ID of your service instance.
-        onLoad: async (instance) => { await instance.render(); }
-      };
-      setTimeout(function(){
-        const t=document.createElement('script');
-        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
-        document.head.appendChild(t);
-      });
+     
+//       window.watsonAssistantChatOptions = {
+//     integrationID: "54b08c09-efc6-4ff4-bf59-f59e3fdac953", // The ID of this integration.
+//     region: "au-syd", // The region your integration is hosted in.
+//     serviceInstanceID: "f493367e-93d4-4a57-85a5-1f0614a4993e", // The ID of your service instance.
+//     onLoad: async (instance) => { await instance.render(); }
+//   };
+//   setTimeout(function(){
+//     const t=document.createElement('script');
+//     t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+//     document.head.appendChild(t);
+//   });
+window.watsonAssistantChatOptions = {
+    integrationID: "54b08c09-efc6-4ff4-bf59-f59e3fdac953", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "f493367e-93d4-4a57-85a5-1f0614a4993e", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+
+
+
+
+
+
+
+
     </script>
     <!-- End Watson Assistant Chat Script -->
 

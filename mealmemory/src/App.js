@@ -1,26 +1,40 @@
 import "./App.css";
-import BackgroundVideo from "./Components/BackgroundVideo";
-import Footer from "./Components/Footer";
-import ImageGallery from "./Components/ImageGallery";
-// import Medium from "./Components/Medium";
-import Nav from "./Components/Nav";
-import { motion } from "framer-motion";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Components/Home";
+import SignUp from "./Components/SignUp";
+// import { messaging } from "./firebase";
+// import { getToken } from "firebase/messaging";
+// import { useEffect } from "react";
 
 function App() {
+//   async function requestPermission() {
+//     const permission = await Notification.requestPermission();
+//     if (permission === "granted") {
+//       // Generate Token
+//       const token = await getToken(messaging, {
+//         vapidKey:
+//           "BLTb0MhfVcjETUxgD6iKnyN-kRXhbSxp-teA9Lgg4PbqBhKxZUA4qC7yDUkzDRgjr6SiGK3qaMUFta-ZoEIoHk0",
+//       });
+//       console.log("Token Gen", token);
+//       // Send this token  to server ( db)
+//     } else if (permission === "denied") {
+//       alert("You denied for the notification");
+//     }
+//   }
+
+//   useEffect(() => {
+//     // Req user for notification permission
+//     requestPermission();
+//   }, []);
   return (
     <>
-      <motion.div
-        initial={{ y: "100vh" }}
-        animate={{ y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <div>
-          <BackgroundVideo />
-          {/* <Medium/> */}
-          <Nav />
-          <ImageGallery />
-        </div>
-      </motion.div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/SignUp" element={<SignUp/>}/>
+      </Routes>
+    </Router>
+      
     </>
   );
 }
