@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import '../Styles/Bmi.css';
+import '../Styles/Bmi.css'
 
 const Bmi = () => {
   const [weight, setWeight] = useState("");
@@ -32,7 +32,12 @@ const Bmi = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="background">
+      <div className="cube"></div>
+      <div className="cube"></div>
+      <div className="cube"></div>
+      <div className="cube"></div>
+    <div className="container mx-auto px-4 py-8 ">
       <h1 className="text-3xl font-bold mb-4">
         Calorie and Macronutrient Calculator
       </h1>
@@ -90,14 +95,15 @@ const Bmi = () => {
       </button>
 
       {calories && (
-        <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">Results</h2>
-          <p>Calories/day: {calories.toFixed(2)}</p>
-          <p>Carbohydrates: {carbs.toFixed(2)} grams/day</p>
-          <p>Proteins: {proteins.toFixed(2)} grams/day</p>
-          <p>Fats: {fats.toFixed(2)} grams/day</p>
+        <div className="mt-4 text-white p-4">
+          <h2 className="text-2xl font-bold mb-2">Results</h2>
+          <p className="text-xl">Calories/day: {calories.toFixed(2)}</p>
+          <p className="text-xl">Carbohydrates: {carbs.toFixed(2)} grams/day</p>
+          <p className="text-xl">Proteins: {proteins.toFixed(2)} grams/day</p>
+          <p className="text-xl">Fats: {fats.toFixed(2)} grams/day</p>
         </div>
       )}
+    </div>
     </div>
   );
 };

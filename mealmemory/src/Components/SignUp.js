@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { 
   Container, SignupContainer, SignInContainer, Form, Title, Input, 
   Button, GhostButton, Anchor, OverLayContainer, OverLay, 
-  LeftOverlayPanel, RightOverlayPanel, Paragraph 
+  LeftOverlayPanel, RightOverlayPanel, Paragraph, 
+  BackgroundContainer
 } from '../Styles/SignStyle';
 import { useNavigate } from 'react-router-dom';
 
@@ -73,6 +74,7 @@ const SignUp = () => {
     setCredentials({ ...credentials, [event.target.name]: event.target.value });
   };
   return (
+   <BackgroundContainer>
     <Container>
       <SignupContainer signIn={signIn}>
         <Form onSubmit={handleSignUp}>
@@ -114,6 +116,7 @@ const SignUp = () => {
         </OverLay>
       </OverLayContainer>
     </Container>
+    </BackgroundContainer>
   );
 }
 

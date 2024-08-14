@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 const Nav1 = () => {
   const Links = [
     { name: "HOME", link: "/" },
-    { name: "Dietician", link:"/diet" },
-    { name: "BLOG'S", link: "/" },
+    { name: "DIETICIAN", link:"/diet" },
+    { name: "FOOD LOG", link: "/food" },
     { name: "CONTACT", link: "/" },
   ];
 
@@ -61,7 +61,7 @@ const Nav1 = () => {
             ))}
             <li className="md:ml-8 text-xl md:my-0 my-7 relative">
               {/* Add DropdownButton for "VedaNutri Balance" */}
-              <Dropdown label={<span className="text-xl font-semibold">VedaNutri Balance</span>} inline>
+              <Dropdown label={<span className="text-xl ">VEDANUTRI BALANCE</span>} inline>
                 <Dropdown.Item as={Link} to="/Bmi">
                   Macro Breakdown
                 </Dropdown.Item>

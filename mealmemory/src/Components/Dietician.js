@@ -13,7 +13,12 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 function Dietician() {
   return (
-      <div className="container bg-green-400 width-full">
+      <div className='background'>
+        <div className='cube'></div>
+        <div className='cube'></div>
+        <div className='cube'></div>
+        <div className='cube'></div>
+        <div className='cube'></div>
       <h1 className="heading text-white"><b>Dieticians</b></h1>
       <Swiper
         effect={'coverflow'}
@@ -128,7 +133,7 @@ function Dietician() {
         </div>
       </Swiper>
     </div>
-
+    
 
   )
 }

@@ -22,7 +22,7 @@ function Home1() {
           <BackgroundVideo />
           {/* <Medium/> */}
           <Nav1 />
-          {/* <Quotation /> */}
+          <Quotation />
           <ImageGallery />
           <Caroseul />
           <Footer />

@@ -18,6 +18,7 @@ import Ayurveda from "./Components/Ayurveda";
 import Vata from "./Components/Vata";
 import Pitta from "./Components/Pitta";
 import Kapha from "./Components/Kapha";
+import GeneratePie1 from "./Components/GeneratePie1";
 
 function App() {
   async function requestPermission() {
@@ -52,7 +53,7 @@ const [signIn, toggle] = useState(true);
         <Route path="/SignUp" element={<SignUp signIn={signIn} toggle={toggle}/>}/>
         <Route path="/createuser"element={<SignUp signIn={!signIn} toggle={toggle}/>}/>
         <Route path="/home" element={<Home1/>}/>
-        <Route path="/pie" element={<GeneratePie />} />
+        <Route path="/food" element={<GeneratePie1/>} />
         <Route path="/Bmi" element={<Bmi/>}/>
         <Route path="/meal" element={<Ayurveda/>}/>
         <Route path="/diet" element={<Dietician/>}/>

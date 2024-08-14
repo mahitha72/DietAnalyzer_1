@@ -58,7 +58,6 @@ const chartSchema = new mongoose.Schema({
   totalFat: Number,
   carbs: Number,
   protein: Number,
-  calories:Number,
   email: String,
 });
 const Chart = mongoose.model("Chart", chartSchema);
@@ -129,10 +128,10 @@ app.post(
 
 // Routes
 app.post("/api/charts/save-chart", async (req, res) => {
-  const { name, totalFat, carbs, protein,calories, email } = req.body;
+  const { name, totalFat, carbs, protein, email } = req.body;
 
   try {
-    const newChart = new Chart({ name, totalFat, carbs, protein,calories, email });
+    const newChart = new Chart({ name, totalFat, carbs, protein, email });
     const savedChart = await newChart.save();
 
     // Debug line to check what is stored in the database
