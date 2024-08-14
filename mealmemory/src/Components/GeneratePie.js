@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { ChakraProvider, Box, Button, Input, VStack, Select, Text } from '@chakra-ui/react';
 import { Pie } from 'react-chartjs-2';
+// import '../Styles/Pie.css';
 import {
   Chart as ChartJS,
   ArcElement,
@@ -107,31 +108,41 @@ const GeneratePie = () => {
   }, [fetchSavedCharts]);
 
   return (
+    // <div className='background'>
+    //     <div className='cube'></div>
+    //     <div className='cube'></div>
+    //     <div className='cube'></div>
+    //     <div className='cube'></div>
+    //     <div className='cube'></div>
+    // <div className="container">
+    // <div class="container-fluid">
     <ChakraProvider>
-      <VStack spacing={4} p={8}>
+      <VStack spacing={4} p={8} className="vstack-container">
         <Input
           placeholder="Enter food items separated by commas (e.g., Apple,Cherry,Butternut)"
           value={selectedItems}
           onChange={(e) => setSelectedItems(e.target.value)}
         />
-        <Button colorScheme="teal" onClick={handleGenerateChart}>
+        <Button size="sm" colorScheme="teal" onClick={handleGenerateChart}>
           Generate Pie Chart
         </Button>
-        <Button colorScheme="blue" onClick={handleStoreChart} disabled={!chartToSave}>
+        <Button size="sm" colorScheme="blue" onClick={handleStoreChart} disabled={!chartToSave}>
           Store Chart
         </Button>
         {pieData && (
-          <Box w="300px" h="300px">
+          <Box w="300px" h="300px" className="pie-chart-container">
             <Pie data={pieData} />
           </Box>
         )}
-        <Select placeholder="Select saved chart" onChange={handleSelectChange}>
-          {savedCharts.map((chart) => (
-            <option key={chart._id} value={chart._id}>
-              {chart.name}
-            </option>
-          ))}
-        </Select>
+        <Box className="dropdown-container">
+          <Select placeholder="Select saved chart" onChange={handleSelectChange}>
+            {savedCharts.map((chart) => (
+              <option key={chart._id} value={chart._id}>
+                {chart.name}
+              </option>
+            ))}
+          </Select>
+        </Box>
         {selectedChart && (
           <Box mt={4} p={4} borderWidth={1} borderRadius="md">
             <Text fontWeight="bold">Chart Details:</Text>
@@ -143,6 +154,7 @@ const GeneratePie = () => {
         )}
       </VStack>
     </ChakraProvider>
+   
   );
 };
 

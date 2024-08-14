@@ -6,18 +6,17 @@ export const Container = styled.div`
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   position: relative;
   overflow: hidden;
-  width: 678px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 678px; 
   min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  top: 30%;
-  left: 30%;
-  margin-top: 300px;
-  margin-right: 100px;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;  
+  top: 10px;  
+  left: 0;  
+  transform: none;  
+  padding: 20px;  
 `;
 export const SignupContainer = styled.div`
   position: absolute;
@@ -61,6 +60,7 @@ export const Form = styled.form`
 export const Title = styled.h3`
   font-weight: bold;
   margin: 0;
+   font-size: 24px;
 `;
 
 export const Input = styled.input`
@@ -69,6 +69,7 @@ export const Input = styled.input`
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+   font-size: 18px;
 `;
 
 export const Button = styled.button`
@@ -77,7 +78,7 @@ export const Button = styled.button`
   // background-color: #ff4b2b;
    background-color: #81A263;
   color: #ffff;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
   padding: 12px 45px;
   letter-spacing: 1px;
@@ -97,7 +98,7 @@ export const GhostButton = styled(Button)`
 
 export const Anchor = styled.a`
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   margin: 15px 0;
 `;
@@ -165,7 +166,7 @@ export const RightOverlayPanel = styled(OverlayPanel)`
   ` : null}
 `;
 export const Paragraph = styled.p`
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 100;
   line-height: 20px;
   letter-spacing: 0.5px;
@@ -175,4 +176,16 @@ export const Paragraph = styled.p`
 `;
 
 
+export const BackgroundContainer = styled.div`
+  background-image: url('./Images/SignUpbg.jpg');  /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
 

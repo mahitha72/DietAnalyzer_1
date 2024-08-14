@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   const Links = [
     { name: "HOME", link: "/SignUp" },
-    { name: "Dietician", link:"/SignUp" },
-    { name: "BLOG'S", link: "/SignUp" },
+    { name: "DIETICIAN", link:"/SignUp" },
+    { name: "FOOD VLOG", link: "/SignUp" },
     { name: "CONTACT", link: "/SignUp" },
   ];
 
@@ -60,7 +60,7 @@ const Nav = () => {
             ))}
             <li className="md:ml-8 text-xl md:my-0 my-7 relative">
               {/* Add DropdownButton for "VedaNutri Balance" */}
-              <Dropdown label="VedaNutri Balance" inline>
+              <Dropdown label="VEDA NUTRI BALANCE" inline>
                 <Dropdown.Item as={Link} to="/">
                   Macro Breakdown
                 </Dropdown.Item>

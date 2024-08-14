@@ -6,6 +6,7 @@ import Nav from './Nav';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
 import Caroseul from './Caroseul';
+import Quotation from './Quotation';
 
 
 
@@ -19,9 +20,11 @@ function Home() {
         transition={{ duration: 1 }}
       >
         <div>
+        <Quotation/>  
           <BackgroundVideo />
           {/* <Medium/> */}
           <Nav />
+          {/* <Quotation/> */}
           <ImageGallery />
           <Caroseul/>
           <Footer/>
