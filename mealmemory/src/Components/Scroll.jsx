@@ -45,7 +45,7 @@ const Scroll = () => {
   );
 
   useMotionValueEvent(currentIndex, "change", (latest) => {
-    console.log(latest.toFixed(0));
+    // console.log(latest.toFixed(0));
     render(latest.toFixed(0));
   });
 

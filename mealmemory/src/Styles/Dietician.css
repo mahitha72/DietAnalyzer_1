@@ -91,11 +91,11 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #000; 
+  color: #000;
 }
 
 .swiper-pagination {
-  bottom: 10px; 
+  bottom: 10px;
 }
 
 .slider-arrow {
@@ -108,7 +108,6 @@
   align-items: center;
 }
 
-
 .slide-content1,
 .slide-content2,
 .slide-content3,
@@ -120,7 +119,7 @@
 }
 
 .slide-content1 {
-  background-image: url("C:\Users\mahit\OneDrive\Desktop\DietAnalyzer_1\mealmemory\public\Images\dhana.jpg");
+  background-image: url("C:\DietAnalyzer_1\mealmemory\public\Images\dhana.jpg");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;
@@ -129,7 +128,7 @@
 }
 
 .slide-content2 {
-  background-image: url("C:\Users\mahit\OneDrive\Desktop\DietAnalyzer_1\mealmemory\public\Images\vani.jpg");
+  background-image: url("C:\DietAnalyzer_1\mealmemory\public\Images\vani.jpg");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;
@@ -137,7 +136,7 @@
   padding: 20px;
 }
 .slide-content3 {
-  background-image: url("C:\Users\mahit\OneDrive\Desktop\DietAnalyzer_1\mealmemory\public\Images\Rohini.jpg");
+  background-image: url("C:\DietAnalyzer_1\mealmemory\public\Images\Rohini.jpg");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;
@@ -145,7 +144,7 @@
   padding: 20px;
 }
 .slide-content4 {
-  background-image: url("C:\Users\mahit\OneDrive\Desktop\DietAnalyzer_1\mealmemory\public\Images\Rohini.jpg");
+  background-image: url("C:\DietAnalyzer_1\mealmemory\public\Images\Rohini.jpg");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;
@@ -153,7 +152,7 @@
   padding: 20px;
 }
 .slide-content5 {
-  background-image: url("C:\Users\mahit\OneDrive\Desktop\DietAnalyzer_1\mealmemory\public\Images\anvesa.jpg");
+  background-image: url("C:\DietAnalyzer_1\mealmemory\public\Images\anvesa.jpg");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;

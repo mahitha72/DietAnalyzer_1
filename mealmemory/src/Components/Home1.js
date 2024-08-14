@@ -1,16 +1,13 @@
-import React from 'react'
-import BackgroundVideo from './BackgroundVideo';
+import React from "react";
+import BackgroundVideo from "./BackgroundVideo";
 
-import ImageGallery from './ImageGallery';
-import Nav1 from './Nav1';
-import { motion } from 'framer-motion';
-import Footer from './Footer';
-import Caroseul from './Caroseul';
-import Quotation from './Quotation';
-
-
-
-
+import ImageGallery from "./ImageGallery";
+import Nav1 from "./Nav1";
+import { motion } from "framer-motion";
+import Footer from "./Footer";
+import Caroseul from "./Caroseul";
+import Quotation from "./Quotation";
+import Backdrop from "./Backdrop";
 function Home1() {
   return (
     <div>
@@ -20,18 +17,19 @@ function Home1() {
         transition={{ duration: 1 }}
       >
         <div>
-        <Quotation/>
+          <Backdrop />
+          {/* <Quotation/> */}
           <BackgroundVideo />
           {/* <Medium/> */}
-          <Nav1/>
-          <Quotation/>
+          <Nav1 />
+          {/* <Quotation /> */}
           <ImageGallery />
-          <Caroseul/>
-          <Footer/>
+          <Caroseul />
+          <Footer />
         </div>
       </motion.div>
     </div>
-  )
+  );
 }
 
-export default Home1
+export default Home1;
