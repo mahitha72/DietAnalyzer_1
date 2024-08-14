@@ -55,17 +55,11 @@ const Nav = () => {
             Login/Signup
             </Link>
           </Button>
-          
-        </ul>
-      </div>
-            ))}
-            <Button className="text-Black">
+          <Button className="text-Black">
               <Link to="/SignUp">Sign Up/Log In </Link>
             </Button>
-          </ul>
-        </div>
-      </div>
-      {/* <div className='content'>
+        </ul>
+        {/* <div className='content'>
       <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center mx-auto my-6 lg:my-12">
         <div className="order-2 lg:order-1 lg:flex-1 lg:flex lg:flex-col lg:justify-center lg:items-start">
           <h1 className="text-5xl font-bold leading-tight lg:text-6xl text-center lg:text-left mb-4 text-Black">
@@ -87,6 +81,8 @@ const Nav = () => {
         </div>
       </div>
       </div> */}
+        </div>
+      </div>
     </div>
   );
 };

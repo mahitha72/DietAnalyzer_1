@@ -7,20 +7,21 @@ import {
   Tooltip,
   Legend
 } from 'chart.js';
+import foodData from './FoodDataset';
 import axios from 'axios';
 
 // Register the components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const foodData = [
-  // Your food data here
-  { name: 'Apple', totalFat: 0.3, saturatedFat: 0.1, carbs: 25, protein: 0.5 },
-  { name: 'Cherry', totalFat: 0.2, saturatedFat: 0.1, carbs: 16, protein: 1.0 },
-  { name: 'Butternut', totalFat: 0.2, saturatedFat: 0.1, carbs: 12, protein: 1.5 },
-  { name: 'Meat', totalFat: 1, saturatedFat: 0.1, carbs: 2, protein: 5 },
-  { name: 'Egg', totalFat: 0.2, saturatedFat: 0.1, carbs: 16, protein: 1.0 },
-  { name: 'Bacon', totalFat: 0.2, saturatedFat: 0.1, carbs: 12, protein: 1.5 },
-];
+// const foodData = [
+//   // Your food data here
+//   { name: 'Apple', totalFat: 0.3, saturatedFat: 0.1, carbs: 25, protein: 0.5 },
+//   { name: 'Cherry', totalFat: 0.2, saturatedFat: 0.1, carbs: 16, protein: 1.0 },
+//   { name: 'Butternut', totalFat: 0.2, saturatedFat: 0.1, carbs: 12, protein: 1.5 },
+//   { name: 'Meat', totalFat: 1, saturatedFat: 0.1, carbs: 2, protein: 5 },
+//   { name: 'Egg', totalFat: 0.2, saturatedFat: 0.1, carbs: 16, protein: 1.0 },
+//   { name: 'Bacon', totalFat: 0.2, saturatedFat: 0.1, carbs: 12, protein: 1.5 },
+// ];
 
 const GeneratePie = () => {
   const [selectedItems, setSelectedItems] = useState('');
