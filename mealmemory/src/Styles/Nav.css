@@ -1,16 +1,32 @@
-/* src/components/Nav.css */
+
 .navbar {
-    position: fixed; /* Make the navbar fixed */
-    top: 0; /* Position it at the top */
+    position: fixed; 
+    top: 0; 
     left: 0;
-    width: 100%; /* Span the full width of the viewport */
-    z-index: 1000; /* Ensure it stays on top of other content */
-    /* background-color: #yourNavbarColor; Background color of the navbar */
+    width: 100%; 
+    z-index: 1000; 
   }
   
   .content {
         display: flex;
-        flex-direction: column; /* Stack children vertically */
-        height: 100vh; /* Full viewport height */
-        overflow-y: auto; /* Enable vertical scrolling */
+        flex-direction: column; 
+        height: 100vh; 
+        overflow-y: auto; 
       }
+      .navbar .dropdown-menu {
+        visibility: hidden; 
+        opacity: 0; 
+        transition: visibility 0.3s, opacity 0.3s ease;
+        
+        transform: translateY(-10px); 
+      }
+      
+      .navbar li:hover .dropdown-menu {
+        visibility: visible; 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+      .navbar li {
+        position: relative; 
+      }
+      

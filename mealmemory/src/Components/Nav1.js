@@ -3,15 +3,16 @@ import { Dropdown } from "flowbite-react"
 import Button from "./Button";
 import "../Styles/Nav.css";
 import { Link } from "react-router-dom";
+
 // import Bmi from "./Bmi";
 // import Dietician from "./Dietician";
 
-const Nav = () => {
+const Nav1 = () => {
   const Links = [
-    { name: "HOME", link: "/SignUp" },
-    { name: "Dietician", link:"/SignUp" },
-    { name: "BLOG'S", link: "/SignUp" },
-    { name: "CONTACT", link: "/SignUp" },
+    { name: "HOME", link: "/" },
+    { name: "Dietician", link:"/diet" },
+    { name: "BLOG'S", link: "/" },
+    { name: "CONTACT", link: "/" },
   ];
 
   const [open, setOpen] = useState(false);
@@ -25,9 +26,9 @@ const Nav = () => {
         >
           <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-Black">
             <img
-              src="./Images/logo.jpg" // Replace with your image URL
+              src="./Images/logo.jpg" 
               alt="Logo"
-              className="w-10 h-12 mr-3" // Adjust width and height as needed
+              className="w-10 h-12 mr-3" 
             />
             Meal Memory
           </div>
@@ -60,17 +61,17 @@ const Nav = () => {
             ))}
             <li className="md:ml-8 text-xl md:my-0 my-7 relative">
               {/* Add DropdownButton for "VedaNutri Balance" */}
-              <Dropdown label="VedaNutri Balance" inline>
-                <Dropdown.Item as={Link} to="/">
+              <Dropdown label={<span className="text-xl font-semibold">VedaNutri Balance</span>} inline>
+                <Dropdown.Item as={Link} to="/Bmi">
                   Macro Breakdown
                 </Dropdown.Item>
-                <Dropdown.Item as={Link} to="/">
+                <Dropdown.Item as={Link} to="/meal">
                   Ayurveda Meal Balance
                 </Dropdown.Item>
               </Dropdown>
             </li>
             <Button className="text-Black">
-              <Link to="/SignUp">Sign Up/Log In</Link>
+              <Link to="/SignUp">Log Out</Link>
             </Button>
           </ul>
         </div>
@@ -79,4 +80,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Nav1;

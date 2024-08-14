@@ -20,18 +20,23 @@ const ImageGallery = () => {
   const images = [
     {
       src: "/Images/img1.jpg",
-      title: "Image 1",
+      title: "Calorie Analysis",
       description: "Analyzes the number of calories in food to manage energy intake. It helps in diet planning by balancing calorie consumption with expenditure, supporting weight management and overall health.",
     },
     {
       src: "/Images/img2.jpg",
-      title: "Image 2",
+      title: "Diet ",
       description: "Diet recommendations based on macronutrient levels tailor nutrient intake to individual needs, balancing proteins, fats, and carbohydrates to optimize energy, support muscle growth, and maintain overall health for personalized dietary goals.",
     },
     {
       src:"/Images/img3.jpg",
-      title:"Image 3",
+      title:"Ayurveda Doshas",
       description:"Analyze your Vata, Pitta, and Kapha doshas with our interactive tool. Discover your current state, understand imbalances, and receive personalized recommendations to restore harmony and optimize well-being."
+    },
+    {
+      src:"/Images/img4.jpg",
+      title:"Track your Nutrition",
+      description:"Log your meals effortlessly and track nutritional values to maintain a balanced diet. Monitor calories, macronutrients, and vitamins to stay healthy and reach your fitness goals"
     }
   
   ];

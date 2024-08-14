@@ -1,8 +1,9 @@
 import { Carousel } from "flowbite-react";
 
+
 export default function Caroseul() {
   return (
-    <div className="h-64 sm:h-72 xl:h-80 2xl:h-96">
+    <div className="h-94 sm:h-72 xl:h-80 2xl:h-96 custom-scrollbar">
       <Carousel>
         {/* Slide 1 */}
         <div className="flex h-full items-center justify-center bg-green-400 p-6">
@@ -21,7 +22,7 @@ export default function Caroseul() {
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white mt-2">
               Lost 71 lb (35%) and maintained after 492 days.
-            </h2>  
+            </h2>
             <h4 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white mt-4">
               “My life changed. My life is beautiful! I am beautiful!!!”
             </h4>
@@ -45,7 +46,7 @@ export default function Caroseul() {
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white mt-2">
               Achieved a healthier lifestyle and sustained it for 365 days.
-            </h2>  
+            </h2>
             <h4 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white mt-4">
               “I feel more energetic and confident. This journey was worth it!”
             </h4>
@@ -69,13 +70,12 @@ export default function Caroseul() {
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white mt-2">
               Transformed her fitness and well-being over 1 year.
-            </h2>  
+            </h2>
             <h4 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white mt-4">
               “The journey was challenging but so rewarding. I feel great!”
             </h4>
           </div>
         </div>
-
       </Carousel>
     </div>
   );

@@ -10,6 +10,14 @@ import GeneratePie from "./Components/GeneratePie";
 import { messaging } from "./firebase";
 import { getToken } from "firebase/messaging";
 import { useEffect } from "react";
+import Bmi from "./Components/Bmi";
+import Dietician from "./Components/Dietician";
+// import Nav1 from "./Components/Nav1";
+import Home1 from "./Components/Home1";
+import Ayurveda from "./Components/Ayurveda";
+import Vata from "./Components/Vata";
+import Pitta from "./Components/Pitta";
+import Kapha from "./Components/Kapha";
 
 function App() {
   async function requestPermission() {
@@ -43,7 +51,14 @@ const [signIn, toggle] = useState(true);
         <Route path="/" element={<Home/>}/>
         <Route path="/SignUp" element={<SignUp signIn={signIn} toggle={toggle}/>}/>
         <Route path="/createuser"element={<SignUp signIn={!signIn} toggle={toggle}/>}/>
+        <Route path="/home" element={<Home1/>}/>
         <Route path="/pie" element={<GeneratePie />} />
+        <Route path="/Bmi" element={<Bmi/>}/>
+        <Route path="/meal" element={<Ayurveda/>}/>
+        <Route path="/diet" element={<Dietician/>}/>
+        <Route path="/Vata" element={<Vata/>}/>
+        <Route path="/Pitta" element={<Pitta/>}/>
+        <Route path="/Kapha" element={<Kapha/>}/>
       </Routes>
       </div>
     </Router>

@@ -1,0 +1,170 @@
+.swiper_container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-content {
+  width: 60%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.rating {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.rating span {
+  font-size: 14px;
+  color: #888;
+}
+
+.claim-business {
+  font-size: 14px;
+  color: black;
+  margin: 10px 0;
+}
+
+.experience {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.location,
+.contact {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.location ion-icon,
+.contact ion-icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+.slide-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper_container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000; 
+}
+
+.swiper-pagination {
+  bottom: 10px; 
+}
+
+.slider-arrow {
+  cursor: pointer;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.slide-content1,
+.slide-content2,
+.slide-content3,
+.slide-content4,
+.slide-content5 {
+  background-size: cover;
+  background-position: right bottom;
+  padding: 20px;
+}
+
+.slide-content1 {
+  background-image: url("C:\Users\mahit\OneDrive\Desktop\DietAnalyzer_1\mealmemory\public\Images\dhana.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+}
+
+.slide-content2 {
+  background-image: url("C:\Users\mahit\OneDrive\Desktop\DietAnalyzer_1\mealmemory\public\Images\vani.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+}
+.slide-content3 {
+  background-image: url("C:\Users\mahit\OneDrive\Desktop\DietAnalyzer_1\mealmemory\public\Images\Rohini.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+}
+.slide-content4 {
+  background-image: url("C:\Users\mahit\OneDrive\Desktop\DietAnalyzer_1\mealmemory\public\Images\Rohini.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+}
+.slide-content5 {
+  background-image: url("C:\Users\mahit\OneDrive\Desktop\DietAnalyzer_1\mealmemory\public\Images\anvesa.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+}
+
+.availability {
+  font-size: 14px;
+  color: black;
+}
+h1 {
+  font-size: 30px;
+}

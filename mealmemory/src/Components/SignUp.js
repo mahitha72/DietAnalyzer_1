@@ -42,7 +42,7 @@ const SignUp = () => {
       localStorage.setItem('userEmail', credentials.email); // Store email in local storage
       console.log(localStorage.getItem("userEmail"))
       alert("Login successfully");
-      navigate('/pie');
+      navigate('/home');
     } else {
       alert("Invalid login credentials");
     }
