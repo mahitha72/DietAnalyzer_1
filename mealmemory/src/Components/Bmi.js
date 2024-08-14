@@ -37,8 +37,8 @@ const Bmi = () => {
       <div className="cube"></div>
       <div className="cube"></div>
       <div className="cube"></div>
-    <div className="container mx-auto px-4 py-8 ">
-      <h1 className="text-3xl font-bold mb-4">
+    <div className="container mx-auto px-4 py-8 bg-gray-300 rounded-lg shadow-lg">
+      <h1 className="text-3xl font-bold mb-4 text-black">
         Calorie and Macronutrient Calculator
       </h1>
       <div className="mb-4">
