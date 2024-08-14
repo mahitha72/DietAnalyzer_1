@@ -2,25 +2,33 @@ import React, { useState } from "react";
 import Button from "./Button";
 import "../Styles/Nav.css";
 import { Link } from "react-router-dom";
+
 const Nav = () => {
-  let Links = [
+  const Links = [
     { name: "HOME", link: "/" },
-    { name: "SERVICE", link: "/" },
-    { name: "ABOUT", link: "/" },
+    {
+      name: "VedaNutri Balance",
+      link: "#",
+      dropdown: [
+        { name: "Ayurveda Meal Balance", link: "/seo" },
+        // { name: "Marketing", link: "/marketing" },
+      ],
+    },
     { name: "BLOG'S", link: "/" },
     { name: "CONTACT", link: "/" },
   ];
-  let [open, setOpen] = useState(false);
+
+  const [open, setOpen] = useState(false);
+  const [serviceOpen, setServiceOpen] = useState(false); // Add this line
 
   return (
     <div className="navbar">
-      <div className="md w-full fixed top-0 left-0 bg-white">
+      <div className="md:w-full fixed top-0 left-0 bg-white">
         <div
           className="md:flex items-center justify-between bg-[#yourBodyColor] pb-0 py-3 md:px-9 px-7"
           style={{ height: "10vh" }}
         >
           <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-Black">
-            {/* <img src = "./Images/" ></img>  */}
             <img
               src="./Images/logo.jpg" // Replace with your image URL
               alt="Logo"
@@ -43,53 +51,40 @@ const Nav = () => {
             }`}
           >
             {Links.map((link) => (
-              <li key={link.name} className="md:ml-8 text-xl md:my-0 my-7">
+              <li
+                key={link.name}
+                className="md:ml-8 text-xl md:my-0 my-7 relative"
+                onMouseEnter={() => link.dropdown && setServiceOpen(true)}
+                onMouseLeave={() => link.dropdown && setServiceOpen(false)}
+              >
                 <a
                   href={link.link}
                   className="text-Black hover:text-gray-400 duration-500"
                 >
                   {link.name}
                 </a>
+                {link.dropdown && serviceOpen && (
+                  <ul className="dropdown-menu absolute left-0 mt-2 bg-white shadow-lg rounded-md">
+                    {link.dropdown.map((item) => (
+                      <li key={item.name} className="px-4 py-2 hover:bg-gray-100">
+                        <Link
+                          to={item.link}
+                          className="text-Black hover:text-gray-400 duration-500"
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
-            ))
-          }
-          <Button className="text-Black">
-          <Link to='/SignUp'>
-            Login/Signup
-            </Link>
-          </Button>
-          
-        </ul>
-      </div>
             ))}
             <Button className="text-Black">
-              <Link to="/SignUp">Sign Up/Log In </Link>
+              <Link to="/SignUp">Sign Up/Log In</Link>
             </Button>
           </ul>
         </div>
       </div>
-      {/* <div className='content'>
-      <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center mx-auto my-6 lg:my-12">
-        <div className="order-2 lg:order-1 lg:flex-1 lg:flex lg:flex-col lg:justify-center lg:items-start">
-          <h1 className="text-5xl font-bold leading-tight lg:text-6xl text-center lg:text-left mb-4 text-Black">
-            Precision Diet Tracking for Better Health
-          </h1>
-          <h4 className="text-lg lg:text-xl text-center lg:text-left text-grey-200">
-            Leverage advanced technology and dietitian expertise <br />
-            to achieve your health goals with detailed food tracking,
-            <br /> personalized Ayurvedic diet plans, and engaging features that
-            keep you motivated and healthy.
-          </h4>
-        </div>
-        <div className="order-1 lg:order-2 lg:flex-1 lg:flex lg:justify-end">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_lpOWvtJoRKj60F399onte9uzNmU4ikwm6w&s"
-            alt="Diet Tracking"
-            className="max-w-[270px] lg:max-w-[300px] opacity-0 animate-fadeIn"
-          />
-        </div>
-      </div>
-      </div> */}
     </div>
   );
 };
