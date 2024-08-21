@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import SignUp from "./Components/SignUp";
-import GeneratePie from "./Components/GeneratePie";
 // import { messaging } from "./firebase";
 // import { getToken } from "firebase/messaging";
 // import { useEffect } from "react";
@@ -19,6 +18,7 @@ import Vata from "./Components/Vata";
 import Pitta from "./Components/Pitta";
 import Kapha from "./Components/Kapha";
 import GeneratePie1 from "./Components/GeneratePie1";
+// import PieChart from "./Components/PieChart";
 
 function App() {
   async function requestPermission() {
@@ -60,6 +60,7 @@ const [signIn, toggle] = useState(true);
         <Route path="/Vata" element={<Vata/>}/>
         <Route path="/Pitta" element={<Pitta/>}/>
         <Route path="/Kapha" element={<Kapha/>}/>
+        {/* <Route path="/PieChart" element={<PieChart/>}/> */}
       </Routes>
       </div>
     </Router>

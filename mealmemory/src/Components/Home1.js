@@ -17,12 +17,12 @@ function Home1() {
         transition={{ duration: 1 }}
       >
         <div>
-          <Backdrop />
-          {/* <Quotation/> */}
+          {/* <Backdrop /> */}
+          <Quotation/>
           <BackgroundVideo />
           {/* <Medium/> */}
           <Nav1 />
-          <Quotation />
+          {/* <Quotation /> */}
           <ImageGallery />
           <Caroseul />
           <Footer />

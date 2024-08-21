@@ -4,6 +4,14 @@ import '../Styles/Vata.css';
 
 const Vata = () => {
   return (
+    <div class="container-fluid">
+    <div class="background">
+       <div class="cube"></div>
+       <div class="cube"></div>
+       <div class="cube"></div>
+       <div class="cube"></div>
+      <div class="cube"></div>
+    </div>
     <div className="vata-container">
   <h1 className="vata-heading">Tips for balancing Vata</h1>
   
@@ -14,19 +22,17 @@ const Vata = () => {
   <p className='vata-text'>
     Try the following practices to balance your vata.
   </p>
-  <ul className="vata-text">
-  <li>Choose grounding foods such as sweet potatoes; moist, warming grains and soups; organic oils and ghee; and natural, high-quality sweeteners (i.e., maple syrup or raw honey).</li>
-<li>Integrate warming and carminative (gas-relieving) spices (such as cinnamon, cumin, ginger, salt, cloves, mustard seed, black pepper, cardamom, and basil) into your cooking.</li>
+  <ul className="text-black list-disc">
 <li>Avoid dry, raw, and undercooked foods.</li>
-<li>Practice waking up at sunrise and going to bed at the same time every night, maintaining eight hours of restful sleep.</li>  
+<li>Maintain eight hours of restful sleep.</li>  
 <li>Do self-massage daily with warm sesame oil, paying extra attention to the feet.</li>
-<li>Eat meals at the same time daily: ideally, breakfast between 7:00 and 8:30 am, lunch between 11:00 am and 2:00 pm, and dinner between 5:30 and 7:00 pm. </li>
+<li>Eat meals at the same time daily. </li>
 <li>Make lunch your biggest meal and dinner your smallest.</li>
-<li>Avoid overstimulation. Take time daily for reflection and stillness</li>
-  </ul>
+<li>Take time daily for reflection and stillness</li>
+  </ul>
 </div>
-
+</div>
   );
 };
 
-export default Vata;
+export default Vata;    

@@ -1,8 +1,16 @@
- import React from 'react';
+import React from 'react';
 import '../Styles/Pitta.css';
 
 const Pitta = () => {
   return (
+    <div class="container-fluid">
+    <div class="background">
+       <div class="cube"></div>
+       <div class="cube"></div>
+       <div class="cube"></div>
+       <div class="cube"></div>
+      <div class="cube"></div>
+    </div>
     <div className="pitta-container">
       <h1 className="pitta-heading">Tips for balancing Pitta</h1>
       
@@ -14,16 +22,15 @@ const Pitta = () => {
       <p className='pitta-text'>
         Try the following practices to balance your pitta.
       </p>
-      <ul className="pitta-text">
+      <ul className="text-black list-disc">
         <li>Avoid the hot sun of midday.</li>
         <li>Take a walk barefoot at dawn in the dewy grass.</li>
         <li>If your skin is reacting to the heat, apply a thin layer of coconut oil followed by a lukewarm shower.</li>
         <li>To cool the skin and eyes, keep a bottle of rosewater around you and spritz your face and skin regularly.</li>
-        <li>If you’re experiencing acid indigestion, nausea, or loose stools, practice a pitta-pacifying diet.  Favor the flavors of sweet, bitter, and astringent. Foods like fresh green vegetables, basmati rice, coconut water, sweet apples, ripe bananas, watermelon, cucumbers, and cilantro are all terrific for cooling the hot belly.</li>
-        <li>Avoid pungent, salty, and sour. Avoid overly salty, oily, fried, and spicy foods, including onions, garlic, processed, and canned foods. Avoid all alcohol and coffee; especially if your skin is irritated.</li>
-      </ul>
+        <li>If you’re experiencing acid indigestion, nausea, or loose stools, practice a pitta-pacifying diet.</li></ul>
+    </div>
     </div>
   );
 };
 
-export default Pitta;
+export default Pitta;  
