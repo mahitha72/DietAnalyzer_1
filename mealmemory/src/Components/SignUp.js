@@ -24,7 +24,7 @@ const SignUp = () => {
   };
   const handleSignIn = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/loginuser", {
+    const response = await fetch("https://dietanalyzer-1.onrender.com/api/loginuser", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -50,7 +50,8 @@ const SignUp = () => {
   };
   const handleSignUp = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/createuser", {
+   
+    const response = await fetch("https://dietanalyzer-1.onrender.com/api/createuser", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
