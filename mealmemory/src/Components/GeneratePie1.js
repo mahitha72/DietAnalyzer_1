@@ -87,7 +87,7 @@ const GeneratePie1 = () => {
     if (chartToSave) {
       try {
         await axios.post(
-          "http://localhost:5000/api/charts/save-chart",
+          "https://dietanalyzer-1.onrender.com/api/charts/save-chart",
           chartToSave
         );
         fetchSavedCharts();
@@ -111,7 +111,7 @@ const GeneratePie1 = () => {
   const fetchSavedCharts = useCallback(async () => {
     if (userEmail) {
       try {
-        const response = await axios.get("http://localhost:5000/api/charts", {
+        const response = await axios.get("https://dietanalyzer-1.onrender.com/api/charts", {
           params: { email: userEmail },
         });
         setSavedCharts(response.data);
@@ -128,7 +128,7 @@ const GeneratePie1 = () => {
   const handleFetchWeeklyReport = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/charts/weekly-report",
+        "https://dietanalyzer-1.onrender.com/api/charts/weekly-report",
         {
           params: { email: userEmail },
         }
@@ -142,7 +142,7 @@ const GeneratePie1 = () => {
   const handleFetchMonthlyReport = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/charts/monthly-report",
+        "https://dietanalyzer-1.onrender.com/api/charts/monthly-report",
         {
           params: { email: userEmail },
         }
